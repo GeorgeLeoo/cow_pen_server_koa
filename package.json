@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node src/index.js",
+    "serve": "nodemon --exec babel-node src/index.js",
     "build": "cross-env NODE_ENV=prod webpack --config config/webpack.config.prod.js",
     "dev": "cross-env NODE_ENV=dev nodemon --exec babel-node --inspect src/index.js",
     "clean": "rimraf dist",
@@ -12,7 +12,9 @@
     "debug": "nodemon --inspect ./dist/server.bundle.js",
     "all": "npm-run-all -p watch debug",
     "boot": "cnpm i || yarn || npm i",
-    "test": "jest"
+    "test": "jest",
+    "start": "pm2 start processes.json",
+    "stop": "pm2 stop processes.json"
   },
   "keywords": [],
   "author": "",

@@ -47,6 +47,27 @@ const webpackConfig = {
         __dirname: true,
         setImmediate: true,
         path: true,
+    },
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          vendor: {
+            name: 'vendor',
+            test: /[\\/]node_modules[\\/]/,
+            minSize: 0,
+            minChunks: 1,
+            priority: 10,
+            chunks: 'initial'
+          },
+          common: {
+            name: 'common',
+            test: /[\\/]src[\\/]/,
+            minSize: 0,
+            minChunks: 2,
+            chunks: 'all'
+          }
+        }
+      }
     }
 }
 

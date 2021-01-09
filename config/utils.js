@@ -5,7 +5,7 @@ exports.resolve = function(dir) {
 }
 
 exports.APP_PATH = exports.resolve('src')
-exports.DIST_PATH = exports.resolve('exam-server')
+exports.DIST_PATH = exports.resolve('cow-pen-server')
 
 exports.getWebpackResolveConfig = function (customAlias = {}) {
     const appPath = exports.APP_PATH;
