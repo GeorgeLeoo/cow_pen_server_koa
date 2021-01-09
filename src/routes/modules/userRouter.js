@@ -1,32 +1,21 @@
 import Router from 'koa-router'
-import userController from '../../api/UserController'
+import controller from '../../controller/index'
 
 const router = new Router()
 
 router.prefix('/user')
 
 // 登录
-router.post('/login', userController.login)
+router.post('/login', controller.UserController.login)
 
 // 注册
-router.post('/register', userController.register)
-
-// 忘记密码
-router.post('/forget', userController.forget)
+router.post('/register', controller.UserController.register)
 
 // 获取某用户信息
-router.get('/info', userController.info)
+router.get('/', controller.UserController.findUserInfoByUID)
 
-// 获取全部用户信息
-router.get('/infos', userController.getUserInfos)
+// 退出登录
+router.patch('/logout', controller.UserController.logout)
 
-// 创建用户
-router.post('/info', userController.createUser)
-
-// 用户状态【开启、关闭】
-router.put('/status', userController.openOrCloseUser)
-
-// 更新用户
-router.patch('/info', userController.updateUser)
 
 export default router

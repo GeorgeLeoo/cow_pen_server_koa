@@ -30,4 +30,4 @@ mongoose.connection.on("disconnected", function() {
   console.log("Mongoose connection disconnected");
 });
 
-module.exports = mongoose;
+export default mongoose;

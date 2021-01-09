@@ -1,5 +1,5 @@
 import Router from 'koa-router'
-import uploadController from '../../api/UploadController'
+import uploadController from '../../controller/UploadController'
 
 const router = new Router()
 

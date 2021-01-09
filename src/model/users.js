@@ -11,10 +11,6 @@ const Users = new Schema({
   },
   name: String,
   password: String,
-  email: {
-    type: String,
-    unique: true
-  },
   gender: Number,
   avatar: String,
   phone: String,
@@ -41,4 +37,4 @@ const Users = new Schema({
   }
 })
 
-module.exports = db.model('Users', Users)
+export default db.model('Users', Users)
