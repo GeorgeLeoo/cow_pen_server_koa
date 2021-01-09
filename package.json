@@ -51,6 +51,7 @@
     "koa-compose": "^4.1.0",
     "koa-jwt": "^3.6.0",
     "nodemon": "^2.0.2",
+    "pm2": "^4.5.1",
     "rimraf": "^3.0.1",
     "terser-webpack-plugin": "^2.3.4",
     "webpack": "^4.41.5",
