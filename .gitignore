@@ -3,6 +3,7 @@ node_modules
 /dist
 /exam-server
 log
+pids
 
 /tests/e2e/videos/
 /tests/e2e/screenshots/
